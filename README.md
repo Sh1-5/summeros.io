@@ -1,16 +1,16 @@
-### 安装依赖
+## Install Dependencies
 
 ```bash
 yarn
 ```
 
-### 启动
+## Start
 
 ```bash
 yarn run dev
 ```
 
-### 打包
+## Build
 
 ```bash
 yarn run build

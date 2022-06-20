@@ -83,7 +83,7 @@ const BaseLayout = memo(() => {
           <div className="connect">
             <div className="title">
               <span>Trabook</span>
-              <img src={Trabook} alt="" />
+              <img src={Trabook} alt="trabook" />
             </div>
             <div className="description">
               Book your trip in minute, get full Control for much longer.

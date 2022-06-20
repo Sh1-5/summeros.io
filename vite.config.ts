@@ -6,6 +6,7 @@ import { VitePluginFonts } from 'vite-plugin-fonts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
     VitePluginFonts({
@@ -23,7 +24,7 @@ export default defineConfig({
     preprocessorOptions: {
       less: {
         modifyVars: {
-          'primary-color': '#67b83c' //全局样式
+          'primary-color': '#67b83c'
         },
         javascriptEnabled: true
       }

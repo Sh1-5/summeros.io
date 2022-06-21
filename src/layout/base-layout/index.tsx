@@ -54,8 +54,11 @@ const BaseLayout = memo(() => {
   ]
 
   const clickMenuItem = (item: any) => {
-    if (item.key === 'contributors' || item.key === 'home') {
-      navigate(`/${item.key}`)
+    if (item.key === 'contributors') {
+      navigate('contributors')
+    }
+    if (item.key === 'home') {
+      navigate('')
     }
   }
 

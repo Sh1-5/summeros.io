@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 
 import { Layout, Menu, Input, Button } from 'antd'
 const { Header, Footer } = Layout
@@ -13,6 +13,7 @@ import Tree from '@/assets/img/tree.png'
 import Circle from '@/assets/img/circle.png'
 
 const BaseLayout = memo(() => {
+  const navigate = useNavigate()
   const menu = [
     {
       label: 'Home',
@@ -52,6 +53,12 @@ const BaseLayout = memo(() => {
     }
   ]
 
+  const clickMenuItem = (item: any) => {
+    if (item.key === 'contributors' || item.key === 'home') {
+      navigate(`/${item.key}`)
+    }
+  }
+
   return (
     <Layout className="summer">
       <Header className="header">
@@ -64,6 +71,7 @@ const BaseLayout = memo(() => {
           mode="horizontal"
           defaultSelectedKeys={['home']}
           items={menu}
+          onClick={(item) => clickMenuItem(item)}
         />
       </Header>
       <Outlet />

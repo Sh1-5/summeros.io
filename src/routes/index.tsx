@@ -1,17 +1,26 @@
 import React from 'react'
-import { RouteObject, useRoutes } from 'react-router-dom'
+import { RouteObject, useRoutes, Navigate } from 'react-router-dom'
 
 import BaseLayout from '@/layout/base-layout'
 import Home from '@/views/home'
+import Contributors from '@/views/contributors'
 
 const routes: RouteObject[] = [
   {
-    path: '/',
+    path: '/*',
     element: <BaseLayout />,
     children: [
       {
-        path: '/',
+        path: '',
+        element: <Navigate to="home" />
+      },
+      {
+        path: 'home',
         element: <Home />
+      },
+      {
+        path: 'contributors',
+        element: <Contributors />
       }
     ]
   }

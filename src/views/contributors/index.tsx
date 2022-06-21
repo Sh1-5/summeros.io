@@ -42,6 +42,11 @@ const contributors = memo(() => {
       location: ''
     },
     {
+      name: 'Sacherer',
+      avatar: 'https://avatars.githubusercontent.com/u/50730566?v=4',
+      location: ''
+    },
+    {
       name: 'xuhanfeng2219',
       avatar: 'https://avatars.githubusercontent.com/u/25318146?v=4',
       location: 'Shenzhen, China'
